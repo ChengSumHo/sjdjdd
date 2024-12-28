@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .login-container h2 {
+            margin-bottom: 1.5rem;
+        }
+        .login-container input {
+            width: calc(100% - 20px); /* Adjust width to account for padding */
+            padding: 10px;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 0.9rem;
+        }
+        .links {
+            display: flex;
+            justify-content: center; /* Center the links */
+            margin-top: 1rem;
+        }
+        .links a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+        .admin-link {
+            margin-top: 1rem; /* Add some space above the Admin Login link */
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <div class="error" id="error-message"></div>
+            <button type="submit">Login</button>
+        </form>
+        <div class="links">
+            <a href="reset.html" class="forgot-password">Forgot Password?</a> <!-- Forgot password link -->
+        </div>
+        <a href="adminlogin.html" class="admin-link">Admin Login</a> <!-- Admin login link -->
+    </div>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+
+            if (username === '' || password === '') {
+                errorMessage.textContent = 'Please fill in all fields.';
+            } else {
+                errorMessage.textContent = '';
+                // Redirect to menu.html on successful login
+                window.location.href = 'menu.html';
+            }
+        });
+    </script>
+</body>
+</html>

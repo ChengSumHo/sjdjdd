@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Forgery Detection</title>
+    <style>
+        * {
+            box-sizing: border-box; /* Include padding and border in element's total width and height */
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007bff;
+            width: 100%; /* Make the navbar full width */
+            padding: 10px 20px; /* Add padding for spacing */
+            position: relative; /* Ensure it stays at the top */
+            z-index: 10; /* Keep it above other content */
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+
+        .menu-button,
+        .logout-button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .menu-button {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .menu-button:hover {
+            background-color: #0056b3;
+        }
+
+        .logout-button {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .logout-button:hover {
+            background-color: #c82333;
+        }
+
+        h1,
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        #dropArea {
+            border: 2px dashed #ccc;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 600px; /* Optional: Set a max width for larger screens */
+            margin: 20px auto; /* Center the drop area */
+            padding: 20px;
+            text-align: center;
+            transition: border-color 0.3s; /* Smooth transition for highlight */
+        }
+
+        #dropArea.highlight {
+            border-color: purple;
+        }
+
+        #fileElem {
+            display: none;
+        }
+
+        #imageComparison {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }
+
+        .imageContainer {
+            width: 48%;
+            min-width: 240px; /* Ensure a minimum width for responsiveness */
+            margin: 0 1%; /* Add margin for spacing */
+        }
+
+        .imageContainer img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .input-container {
+            margin-top: 10px; /* Space above input area */
+            text-align: center;
+            max-width: 400px; /* Limit the width of the input container */
+            margin-left: auto; /* Center the container */
+            margin-right: auto; /* Center the container */
+        }
+
+        .input-container input,
+        .input-container textarea {
+            width: 100%; /* Make inputs fill the container */
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        #processButton {
+            display: block;
+            padding: 10px 20px;
+            background-color: #28a745; /* Green color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-top: 10px; /* Add some space above */
+        }
+
+        #processButton:hover {
+            background-color: #218838; /* Darker green on hover */
+        }
+
+        #processButton:active {
+            transform: scale(0.95); /* Slightly shrink on click */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-container">
+            <a href="test.html" class="menu-button">Go to Test</a>
+            <a href="history.html" class="menu-button">Go to History</a>
+        </div>
+        <a href="login.html" class="logout-button">Logout</a>
+    </div>
+
+    <h1>Image Forgery Detection</h1>
+    <div id="dropArea">
+        <p>Drag & Drop an image here or click to select</p>
+        <input type="file" id="fileElem" accept="image/*">
+    </div>
+    <button id="processButton" style="display:block;">Process Image</button>
+    
+    <div id="imageComparison">
+        <div class="imageContainer">
+            <h2>Original Image</h2>
+            <img id="originalImage" src="" alt="Original Image">
+            <div class="input-container">
+                <input type="text" id="studentId" placeholder="Student ID" required>
+                <input type="text" id="studentName" placeholder="Student Name" required>
+                <input type="date" id="date" required>
+                <textarea id="description" placeholder="Description" rows="3"></textarea>
+            </div>
+        </div>
+        <div class="imageContainer">
+            <h2>Detection Result</h2>
+            <img id="resultImage" src="" alt="Detection Result">
+        </div>
+    </div>
+
+    <script>
+        let dropArea = document.getElementById('dropArea');
+        let fileElem = document.getElementById('fileElem');
+        let processButton = document.getElementById('processButton');
+        let originalImage = document.getElementById('originalImage');
+        let resultImage = document.getElementById('resultImage');
+
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+        });
+
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false);
+        });
+
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false);
+        });
+
+        function highlight(e) {
+            dropArea.classList.add('highlight');
+        }
+
+        function unhighlight(e) {
+            dropArea.classList.remove('highlight');
+        }
+
+        dropArea.addEventListener('drop', handleDrop, false);
+
+        function handleDrop(e) {
+            let dt = e.dataTransfer;
+            let files = dt.files;
+            handleFiles(files);
+        }
+
+        dropArea.addEventListener('click', () => fileElem.click());
+        fileElem.addEventListener('change', () => handleFiles(fileElem.files));
+
+        function handleFiles(files) {
+            if (files.length > 0) {
+                displayOriginalImage(files[0]);
+                processButton.style.display = 'block';
+                processButton.onclick = () => uploadFile(files[0]);
+            }
+        }
+
+        function displayOriginalImage(file) {
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                originalImage.src = e.target.result;
+            }
+            reader.readAsDataURL(file);
+        }
+
+        function uploadFile(file) {
+            let formData = new FormData();
+            formData.append('imageToUpload', file);
+            formData.append('studentId', document.getElementById('studentId').value);
+            formData.append('studentName', document.getElementById('studentName').value);
+            formData.append('date', document.getElementById('date').value);
+            formData.append('description', document.getElementById('description').value);
+
+            fetch('process_image.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Server response:', data);
+                if (data.success) {
+                    resultImage.src = data.result;
+                    console.log('Setting result image src to:', data.result);
+                } else {
+                    console.error('Error from server:', data.error);
+                    alert(`Error: ${data.error}`);
+                }
+            })
+            .catch(error => {
+                console.error('Fetch error:', error);
+                alert('An error occurred while processing the image. Check the console for details.');
+            });
+        }
+    </script>
+</body>
+</html>

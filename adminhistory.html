@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007bff;
+            padding: 10px 20px;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+        .menu-container {
+            display: flex;
+            align-items: center;
+        }
+        .menu-button {
+            padding: 15px 30px;
+            margin-right: 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .menu-button:hover {
+            background-color: #0056b3;
+        }
+        .logout-button {
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .logout-button:hover {
+            background-color: #c82333;
+        }
+        .content {
+            text-align: center;
+            margin-top: 50px; /* Space for navbar */
+        }
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .search-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .search-input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-container">
+            <a href="adminhistory.html" class="menu-button">Go to History</a>
+        </div>
+        <a href="login.html" class="logout-button">Logout</a>
+    </div>
+    <div class="content">
+        <h1>Admin History Page</h1>
+        <p>Search for a username:</p>
+        <div class="search-container">
+            <input type="text" class="search-input" id="usernameSearch" placeholder="Enter username to search...">
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Username</th>
+                    <th>Student ID</th>
+                    <th>Student Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>File Name</th>
+                </tr>
+            </thead>
+            <tbody id="historyTableBody">
+                <tr>
+                    <td>User1</td>
+                    <td>s213948</td>
+                    <td>Chan Tai Man</td>
+                    <td>2024-11-01</td>
+                    <td>14:30</td>
+                    <td>example1.jpg</td>
+                </tr>
+                <tr>
+                    <td>User2</td>
+                    <td>s194739</td>
+                    <td>Lee Lai Yin</td>
+                    <td>2024-11-02</td>
+                    <td>09:15</td>
+                    <td>example2.png</td>
+                </tr>
+                <tr>
+                    <td>User1</td>
+                    <td>s205847</td>
+                    <td>Cheung Ming Fong</td>
+                    <td>2024-11-03</td>
+                    <td>18:45</td>
+                    <td>example3.png</td>
+                </tr>
+                <tr>
+                    <td>User3</td>
+                    <td>s194739</td>
+                    <td>Lee Lai Yin</td>
+                    <td>2024-11-04</td>
+                    <td>11:00</td>
+                    <td>example4.jpg</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        document.getElementById('usernameSearch').addEventListener('input', function() {
+            const filter = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#historyTableBody tr');
+            
+            rows.forEach(row => {
+                const username = row.cells[0].textContent.toLowerCase(); // Check the first cell for username
+                if (username.includes(filter)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

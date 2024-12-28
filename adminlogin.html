@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .admin-login-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .admin-login-container h2 {
+            margin-bottom: 1.5rem;
+        }
+        .admin-login-container input {
+            width: calc(100% - 20px); /* Adjust width to account for padding */
+            padding: 10px;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .admin-login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .admin-login-container button:hover {
+            background-color: #0056b3;
+        }
+        .error {
+            color: red;
+            font-size: 0.9rem;
+        }
+        .login-link {
+            margin-top: 1rem;
+            display: block;
+            color: #007bff;
+            text-decoration: none;
+        }
+        .login-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="admin-login-container">
+        <h2>Admin Login</h2>
+        <form id="adminLoginForm">
+            <input type="text" id="adminUsername" placeholder="Username" required>
+            <input type="password" id="adminPassword" placeholder="Password" required>
+            <div class="error" id="adminError-message"></div>
+            <button type="submit">Login</button>
+        </form>
+        <a href="login.html" class="login-link">Back to Login</a> <!-- Link to go back to regular login -->
+    </div>
+    <script>
+        document.getElementById('adminLoginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const adminUsername = document.getElementById('adminUsername').value;
+            const adminPassword = document.getElementById('adminPassword').value;
+            const adminErrorMessage = document.getElementById('adminError-message');
+
+            if (adminUsername === '' || adminPassword === '') {
+                adminErrorMessage.textContent = 'Please fill in all fields.';
+            } else {
+                adminErrorMessage.textContent = '';
+                // Redirect to adminmenu.html on successful login
+                window.location.href = 'adminmenu.html';
+            }
+        });
+    </script>
+</body>
+</html>

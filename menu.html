@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #007bff;
+            padding: 10px 20px;
+            color: white;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 20px;
+        }
+        .menu-container {
+            display: flex;
+            align-items: center;
+        }
+        .menu-button {
+            padding: 15px 30px;
+            margin-right: 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .menu-button:hover {
+            background-color: #0056b3;
+        }
+        .logout-button {
+            padding: 10px 20px;
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .logout-button:hover {
+            background-color: #c82333;
+        }
+        .about-button {
+            padding: 15px 30px;
+            margin-right: 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        .about-button:hover {
+            background-color: #0056b3;
+        }
+        .content {
+            text-align: center;
+            margin-top: 50px; /* Space for navbar */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="menu-container">
+            <a href="test.html" class="menu-button">Go to Test</a>
+            <a href="history.html" class="menu-button">Go to History</a>
+        </div>
+        <a href="login.html" class="logout-button">Logout</a>
+    </div>
+    <div class="content">
+        <h1>Welcome to the Menu</h1>
+        <p>Select an option from the navigation above.</p>
+    </div>
+</body>
+</html>

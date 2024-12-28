@@ -1,0 +1,309 @@
+[09-Oct-2024 14:54:53 Europe/Berlin] PHP Fatal error:  Uncaught TypeError: file_exists(): Argument #1 ($filename) must be of type string, Closure given in C:\xampp\htdocs\FYPpage\FOCAL-main\process_image.php:62
+Stack trace:
+#0 C:\xampp\htdocs\FYPpage\FOCAL-main\process_image.php(62): file_exists(Object(Closure))
+#1 {main}
+  thrown in C:\xampp\htdocs\FYPpage\FOCAL-main\process_image.php on line 62
+[22-Oct-2024 08:17:37 Europe/Berlin] Script started
+[22-Oct-2024 08:17:37 Europe/Berlin] POST request received
+[22-Oct-2024 08:17:37 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/pexels-silver-works-909675-2244330.jpg
+[22-Oct-2024 08:17:37 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[22-Oct-2024 08:17:37 Europe/Berlin] File uploaded successfully
+[22-Oct-2024 08:17:37 Europe/Berlin] Input file permissions: 0666
+[22-Oct-2024 08:17:37 Europe/Berlin] Output directory permissions: 0777
+[22-Oct-2024 08:17:37 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[22-Oct-2024 08:17:37 Europe/Berlin] Command output: 
+[22-Oct-2024 08:17:40 Europe/Berlin] Script started
+[22-Oct-2024 08:17:40 Europe/Berlin] POST request received
+[22-Oct-2024 08:17:40 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/pexels-silver-works-909675-2244330.jpg
+[22-Oct-2024 08:17:40 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[22-Oct-2024 08:17:40 Europe/Berlin] File uploaded successfully
+[22-Oct-2024 08:17:40 Europe/Berlin] Input file permissions: 0666
+[22-Oct-2024 08:17:40 Europe/Berlin] Output directory permissions: 0777
+[22-Oct-2024 08:17:40 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[22-Oct-2024 08:17:40 Europe/Berlin] Command output: 
+[22-Oct-2024 08:17:42 Europe/Berlin] Script started
+[22-Oct-2024 08:17:42 Europe/Berlin] POST request received
+[22-Oct-2024 08:17:42 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/pexels-silver-works-909675-2244330.jpg
+[22-Oct-2024 08:17:42 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[22-Oct-2024 08:17:42 Europe/Berlin] File uploaded successfully
+[22-Oct-2024 08:17:42 Europe/Berlin] Input file permissions: 0666
+[22-Oct-2024 08:17:42 Europe/Berlin] Output directory permissions: 0777
+[22-Oct-2024 08:17:42 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[22-Oct-2024 08:17:42 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[22-Oct-2024 08:17:42 Europe/Berlin] Output file not found. Listing directory contents:
+[22-Oct-2024 08:17:42 Europe/Berlin] .
+[22-Oct-2024 08:17:42 Europe/Berlin] ..
+[22-Oct-2024 08:17:42 Europe/Berlin] 1.png
+[22-Oct-2024 08:17:42 Europe/Berlin] 2.png
+[22-Oct-2024 08:17:42 Europe/Berlin] 3.png
+[22-Oct-2024 08:17:42 Europe/Berlin] california-1920x1080.png
+[22-Oct-2024 08:17:42 Europe/Berlin] Input file removed
+[22-Oct-2024 08:17:42 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/pexels-silver-works-909675-2244330.png"}
+[22-Oct-2024 08:17:42 Europe/Berlin] Command output: 
+[22-Oct-2024 08:17:45 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[22-Oct-2024 08:17:45 Europe/Berlin] Output file not found. Listing directory contents:
+[22-Oct-2024 08:17:45 Europe/Berlin] .
+[22-Oct-2024 08:17:45 Europe/Berlin] ..
+[22-Oct-2024 08:17:45 Europe/Berlin] 1.png
+[22-Oct-2024 08:17:45 Europe/Berlin] 2.png
+[22-Oct-2024 08:17:45 Europe/Berlin] 3.png
+[22-Oct-2024 08:17:45 Europe/Berlin] california-1920x1080.png
+[22-Oct-2024 08:17:45 Europe/Berlin] Input file not found for removal
+[22-Oct-2024 08:17:45 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/pexels-silver-works-909675-2244330.png"}
+[22-Oct-2024 08:17:47 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[22-Oct-2024 08:17:47 Europe/Berlin] Output file not found. Listing directory contents:
+[22-Oct-2024 08:17:47 Europe/Berlin] .
+[22-Oct-2024 08:17:47 Europe/Berlin] ..
+[22-Oct-2024 08:17:47 Europe/Berlin] 1.png
+[22-Oct-2024 08:17:47 Europe/Berlin] 2.png
+[22-Oct-2024 08:17:47 Europe/Berlin] 3.png
+[22-Oct-2024 08:17:47 Europe/Berlin] california-1920x1080.png
+[22-Oct-2024 08:17:47 Europe/Berlin] Input file not found for removal
+[22-Oct-2024 08:17:47 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/pexels-silver-works-909675-2244330.png"}
+[24-Oct-2024 07:42:12 Europe/Berlin] Script started
+[24-Oct-2024 07:42:12 Europe/Berlin] POST request received
+[24-Oct-2024 07:42:12 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/pexels-silver-works-909675-2244330.jpg
+[24-Oct-2024 07:42:12 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[24-Oct-2024 07:42:12 Europe/Berlin] File uploaded successfully
+[24-Oct-2024 07:42:12 Europe/Berlin] Input file permissions: 0666
+[24-Oct-2024 07:42:12 Europe/Berlin] Output directory permissions: 0777
+[24-Oct-2024 07:42:12 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[24-Oct-2024 07:42:13 Europe/Berlin] Command output: 
+[24-Oct-2024 07:42:18 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[24-Oct-2024 07:42:18 Europe/Berlin] Output file not found. Listing directory contents:
+[24-Oct-2024 07:42:18 Europe/Berlin] .
+[24-Oct-2024 07:42:18 Europe/Berlin] ..
+[24-Oct-2024 07:42:18 Europe/Berlin] 1.png
+[24-Oct-2024 07:42:18 Europe/Berlin] 2.png
+[24-Oct-2024 07:42:18 Europe/Berlin] 3.png
+[24-Oct-2024 07:42:18 Europe/Berlin] california-1920x1080.png
+[24-Oct-2024 07:42:18 Europe/Berlin] Input file removed
+[24-Oct-2024 07:42:18 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/pexels-silver-works-909675-2244330.png"}
+[24-Oct-2024 07:44:21 Europe/Berlin] Script started
+[24-Oct-2024 07:44:21 Europe/Berlin] POST request received
+[24-Oct-2024 07:44:21 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/tree-736885_1280.jpg
+[24-Oct-2024 07:44:21 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/tree-736885_1280.png
+[24-Oct-2024 07:44:21 Europe/Berlin] File uploaded successfully
+[24-Oct-2024 07:44:21 Europe/Berlin] Input file permissions: 0666
+[24-Oct-2024 07:44:21 Europe/Berlin] Output directory permissions: 0777
+[24-Oct-2024 07:44:21 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[24-Oct-2024 07:44:21 Europe/Berlin] Command output: 
+[24-Oct-2024 07:44:26 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/tree-736885_1280.png
+[24-Oct-2024 07:44:26 Europe/Berlin] Output file not found. Listing directory contents:
+[24-Oct-2024 07:44:26 Europe/Berlin] .
+[24-Oct-2024 07:44:26 Europe/Berlin] ..
+[24-Oct-2024 07:44:26 Europe/Berlin] 1.png
+[24-Oct-2024 07:44:26 Europe/Berlin] 2.png
+[24-Oct-2024 07:44:26 Europe/Berlin] 3.png
+[24-Oct-2024 07:44:26 Europe/Berlin] california-1920x1080.png
+[24-Oct-2024 07:44:26 Europe/Berlin] Input file removed
+[24-Oct-2024 07:44:26 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/tree-736885_1280.png"}
+[24-Oct-2024 07:45:31 Europe/Berlin] Script started
+[24-Oct-2024 07:45:31 Europe/Berlin] POST request received
+[24-Oct-2024 07:45:31 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[24-Oct-2024 07:45:31 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[24-Oct-2024 07:45:31 Europe/Berlin] File uploaded successfully
+[24-Oct-2024 07:45:31 Europe/Berlin] Input file permissions: 0666
+[24-Oct-2024 07:45:31 Europe/Berlin] Output directory permissions: 0777
+[24-Oct-2024 07:45:31 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[24-Oct-2024 07:45:32 Europe/Berlin] Command output: 
+[24-Oct-2024 07:45:37 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[24-Oct-2024 07:45:37 Europe/Berlin] Output file not found. Listing directory contents:
+[24-Oct-2024 07:45:37 Europe/Berlin] .
+[24-Oct-2024 07:45:37 Europe/Berlin] ..
+[24-Oct-2024 07:45:37 Europe/Berlin] 1.png
+[24-Oct-2024 07:45:37 Europe/Berlin] 2.png
+[24-Oct-2024 07:45:37 Europe/Berlin] 3.png
+[24-Oct-2024 07:45:37 Europe/Berlin] california-1920x1080.png
+[24-Oct-2024 07:45:37 Europe/Berlin] Input file removed
+[24-Oct-2024 07:45:37 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png"}
+[24-Oct-2024 08:00:49 Europe/Berlin] Script started
+[24-Oct-2024 08:00:49 Europe/Berlin] POST request received
+[24-Oct-2024 08:00:49 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/pexels-silver-works-909675-2244330.jpg
+[24-Oct-2024 08:00:49 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[24-Oct-2024 08:00:49 Europe/Berlin] File uploaded successfully
+[24-Oct-2024 08:00:49 Europe/Berlin] Input file permissions: 0666
+[24-Oct-2024 08:00:49 Europe/Berlin] Output directory permissions: 0777
+[24-Oct-2024 08:00:49 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[24-Oct-2024 08:00:49 Europe/Berlin] Command output: 
+[24-Oct-2024 08:00:54 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[24-Oct-2024 08:00:54 Europe/Berlin] Output file not found. Listing directory contents:
+[24-Oct-2024 08:00:54 Europe/Berlin] .
+[24-Oct-2024 08:00:54 Europe/Berlin] ..
+[24-Oct-2024 08:00:54 Europe/Berlin] 1.png
+[24-Oct-2024 08:00:54 Europe/Berlin] 2.png
+[24-Oct-2024 08:00:54 Europe/Berlin] 3.png
+[24-Oct-2024 08:00:54 Europe/Berlin] california-1920x1080.png
+[24-Oct-2024 08:00:54 Europe/Berlin] Input file removed
+[24-Oct-2024 08:00:54 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/pexels-silver-works-909675-2244330.png"}
+[24-Oct-2024 08:09:54 Europe/Berlin] Script started
+[24-Oct-2024 08:09:54 Europe/Berlin] POST request received
+[24-Oct-2024 08:09:54 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/pexels-silver-works-909675-2244330.jpg
+[24-Oct-2024 08:09:54 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[24-Oct-2024 08:09:54 Europe/Berlin] File uploaded successfully
+[24-Oct-2024 08:09:54 Europe/Berlin] Input file permissions: 0666
+[24-Oct-2024 08:09:54 Europe/Berlin] Output directory permissions: 0777
+[24-Oct-2024 08:09:54 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[24-Oct-2024 08:09:54 Europe/Berlin] Command output: 
+[24-Oct-2024 08:09:59 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[24-Oct-2024 08:09:59 Europe/Berlin] Output file not found. Listing directory contents:
+[24-Oct-2024 08:09:59 Europe/Berlin] .
+[24-Oct-2024 08:09:59 Europe/Berlin] ..
+[24-Oct-2024 08:09:59 Europe/Berlin] 1.png
+[24-Oct-2024 08:09:59 Europe/Berlin] 2.png
+[24-Oct-2024 08:09:59 Europe/Berlin] 3.png
+[24-Oct-2024 08:09:59 Europe/Berlin] california-1920x1080.png
+[24-Oct-2024 08:09:59 Europe/Berlin] Input file removed
+[24-Oct-2024 08:09:59 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/pexels-silver-works-909675-2244330.png"}
+[24-Oct-2024 08:17:26 Europe/Berlin] Script started
+[24-Oct-2024 08:17:26 Europe/Berlin] POST request received
+[24-Oct-2024 08:17:26 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/pexels-silver-works-909675-2244330.jpg
+[24-Oct-2024 08:17:26 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[24-Oct-2024 08:17:26 Europe/Berlin] File uploaded successfully
+[24-Oct-2024 08:17:26 Europe/Berlin] Input file permissions: 0666
+[24-Oct-2024 08:17:26 Europe/Berlin] Output directory permissions: 0777
+[24-Oct-2024 08:17:26 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[24-Oct-2024 08:17:26 Europe/Berlin] Command output: 
+[24-Oct-2024 08:17:31 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[24-Oct-2024 08:17:31 Europe/Berlin] Output file not found. Listing directory contents:
+[24-Oct-2024 08:17:31 Europe/Berlin] .
+[24-Oct-2024 08:17:31 Europe/Berlin] ..
+[24-Oct-2024 08:17:31 Europe/Berlin] 1.png
+[24-Oct-2024 08:17:31 Europe/Berlin] 2.png
+[24-Oct-2024 08:17:31 Europe/Berlin] 3.png
+[24-Oct-2024 08:17:31 Europe/Berlin] california-1920x1080.png
+[24-Oct-2024 08:17:31 Europe/Berlin] Input file removed
+[24-Oct-2024 08:17:31 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/pexels-silver-works-909675-2244330.png"}
+[05-Nov-2024 08:18:31 Europe/Berlin] Script started
+[05-Nov-2024 08:18:31 Europe/Berlin] POST request received
+[05-Nov-2024 08:18:31 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/pexels-silver-works-909675-2244330.jpg
+[05-Nov-2024 08:18:31 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[05-Nov-2024 08:18:31 Europe/Berlin] File uploaded successfully
+[05-Nov-2024 08:18:31 Europe/Berlin] Input file permissions: 0666
+[05-Nov-2024 08:18:31 Europe/Berlin] Output directory permissions: 0777
+[05-Nov-2024 08:18:31 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[05-Nov-2024 08:18:31 Europe/Berlin] Command output: 
+[05-Nov-2024 08:18:36 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[05-Nov-2024 08:18:36 Europe/Berlin] Output file not found. Listing directory contents:
+[05-Nov-2024 08:18:36 Europe/Berlin] .
+[05-Nov-2024 08:18:36 Europe/Berlin] ..
+[05-Nov-2024 08:18:36 Europe/Berlin] 1.png
+[05-Nov-2024 08:18:36 Europe/Berlin] 2.png
+[05-Nov-2024 08:18:36 Europe/Berlin] 3.png
+[05-Nov-2024 08:18:36 Europe/Berlin] california-1920x1080.png
+[05-Nov-2024 08:18:36 Europe/Berlin] Input file removed
+[05-Nov-2024 08:18:36 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/pexels-silver-works-909675-2244330.png"}
+[05-Nov-2024 08:54:47 Europe/Berlin] Script started
+[05-Nov-2024 08:54:47 Europe/Berlin] POST request received
+[05-Nov-2024 08:54:47 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/pexels-silver-works-909675-2244330.jpg
+[05-Nov-2024 08:54:47 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[05-Nov-2024 08:54:47 Europe/Berlin] File uploaded successfully
+[05-Nov-2024 08:54:47 Europe/Berlin] Input file permissions: 0666
+[05-Nov-2024 08:54:47 Europe/Berlin] Output directory permissions: 0777
+[05-Nov-2024 08:54:47 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[05-Nov-2024 08:54:47 Europe/Berlin] Command output: 
+[05-Nov-2024 08:54:52 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/pexels-silver-works-909675-2244330.png
+[05-Nov-2024 08:54:52 Europe/Berlin] Output file not found. Listing directory contents:
+[05-Nov-2024 08:54:52 Europe/Berlin] .
+[05-Nov-2024 08:54:52 Europe/Berlin] ..
+[05-Nov-2024 08:54:52 Europe/Berlin] 1.png
+[05-Nov-2024 08:54:52 Europe/Berlin] 2.png
+[05-Nov-2024 08:54:52 Europe/Berlin] 3.png
+[05-Nov-2024 08:54:52 Europe/Berlin] california-1920x1080.png
+[05-Nov-2024 08:54:52 Europe/Berlin] Input file removed
+[05-Nov-2024 08:54:52 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/pexels-silver-works-909675-2244330.png"}
+[05-Nov-2024 09:08:57 Europe/Berlin] Script started
+[05-Nov-2024 09:08:57 Europe/Berlin] POST request received
+[05-Nov-2024 09:08:57 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/tree-736885_1280.jpg
+[05-Nov-2024 09:08:57 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/tree-736885_1280.png
+[05-Nov-2024 09:08:57 Europe/Berlin] File uploaded successfully
+[05-Nov-2024 09:08:57 Europe/Berlin] Input file permissions: 0666
+[05-Nov-2024 09:08:57 Europe/Berlin] Output directory permissions: 0777
+[05-Nov-2024 09:08:57 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[05-Nov-2024 09:08:57 Europe/Berlin] Command output: 
+[05-Nov-2024 09:09:02 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/tree-736885_1280.png
+[05-Nov-2024 09:09:02 Europe/Berlin] Output file not found. Listing directory contents:
+[05-Nov-2024 09:09:02 Europe/Berlin] .
+[05-Nov-2024 09:09:02 Europe/Berlin] ..
+[05-Nov-2024 09:09:02 Europe/Berlin] 1.png
+[05-Nov-2024 09:09:02 Europe/Berlin] 2.png
+[05-Nov-2024 09:09:02 Europe/Berlin] 3.png
+[05-Nov-2024 09:09:02 Europe/Berlin] california-1920x1080.png
+[05-Nov-2024 09:09:02 Europe/Berlin] Input file removed
+[05-Nov-2024 09:09:02 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/tree-736885_1280.png"}
+[05-Nov-2024 09:09:11 Europe/Berlin] Script started
+[05-Nov-2024 09:09:11 Europe/Berlin] POST request received
+[05-Nov-2024 09:09:11 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[05-Nov-2024 09:09:11 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[05-Nov-2024 09:09:11 Europe/Berlin] File uploaded successfully
+[05-Nov-2024 09:09:11 Europe/Berlin] Input file permissions: 0666
+[05-Nov-2024 09:09:11 Europe/Berlin] Output directory permissions: 0777
+[05-Nov-2024 09:09:11 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[05-Nov-2024 09:09:12 Europe/Berlin] Command output: 
+[05-Nov-2024 09:09:17 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[05-Nov-2024 09:09:17 Europe/Berlin] Output file not found. Listing directory contents:
+[05-Nov-2024 09:09:17 Europe/Berlin] .
+[05-Nov-2024 09:09:17 Europe/Berlin] ..
+[05-Nov-2024 09:09:17 Europe/Berlin] 1.png
+[05-Nov-2024 09:09:17 Europe/Berlin] 2.png
+[05-Nov-2024 09:09:17 Europe/Berlin] 3.png
+[05-Nov-2024 09:09:17 Europe/Berlin] california-1920x1080.png
+[05-Nov-2024 09:09:17 Europe/Berlin] Input file removed
+[05-Nov-2024 09:09:17 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png"}
+[05-Nov-2024 10:43:46 Europe/Berlin] Script started
+[05-Nov-2024 10:43:46 Europe/Berlin] POST request received
+[05-Nov-2024 10:43:46 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[05-Nov-2024 10:43:46 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[05-Nov-2024 10:43:46 Europe/Berlin] File uploaded successfully
+[05-Nov-2024 10:43:46 Europe/Berlin] Input file permissions: 0666
+[05-Nov-2024 10:43:46 Europe/Berlin] Output directory permissions: 0777
+[05-Nov-2024 10:43:46 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[05-Nov-2024 10:43:46 Europe/Berlin] Command output: 
+[05-Nov-2024 10:43:51 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[05-Nov-2024 10:43:51 Europe/Berlin] Output file not found. Listing directory contents:
+[05-Nov-2024 10:43:51 Europe/Berlin] .
+[05-Nov-2024 10:43:51 Europe/Berlin] ..
+[05-Nov-2024 10:43:51 Europe/Berlin] 1.png
+[05-Nov-2024 10:43:51 Europe/Berlin] 2.png
+[05-Nov-2024 10:43:51 Europe/Berlin] 3.png
+[05-Nov-2024 10:43:51 Europe/Berlin] california-1920x1080.png
+[05-Nov-2024 10:43:51 Europe/Berlin] Input file removed
+[05-Nov-2024 10:43:51 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png"}
+[28-Nov-2024 06:01:30 Europe/Berlin] Script started
+[28-Nov-2024 06:01:30 Europe/Berlin] POST request received
+[28-Nov-2024 06:01:30 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[28-Nov-2024 06:01:30 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[28-Nov-2024 06:01:30 Europe/Berlin] File uploaded successfully
+[28-Nov-2024 06:01:30 Europe/Berlin] Input file permissions: 0666
+[28-Nov-2024 06:01:30 Europe/Berlin] Output directory permissions: 0777
+[28-Nov-2024 06:01:30 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[28-Nov-2024 06:01:30 Europe/Berlin] Command output: 
+[28-Nov-2024 06:01:35 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[28-Nov-2024 06:01:35 Europe/Berlin] Output file not found. Listing directory contents:
+[28-Nov-2024 06:01:35 Europe/Berlin] .
+[28-Nov-2024 06:01:35 Europe/Berlin] ..
+[28-Nov-2024 06:01:35 Europe/Berlin] 1.png
+[28-Nov-2024 06:01:35 Europe/Berlin] 2.png
+[28-Nov-2024 06:01:35 Europe/Berlin] 3.png
+[28-Nov-2024 06:01:35 Europe/Berlin] california-1920x1080.png
+[28-Nov-2024 06:01:35 Europe/Berlin] Input file removed
+[28-Nov-2024 06:01:35 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png"}
+[15-Dec-2024 06:15:44 Europe/Berlin] Script started
+[15-Dec-2024 06:15:44 Europe/Berlin] POST request received
+[15-Dec-2024 06:15:44 Europe/Berlin] Input file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/input/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[15-Dec-2024 06:15:44 Europe/Berlin] Expected output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[15-Dec-2024 06:15:44 Europe/Berlin] File uploaded successfully
+[15-Dec-2024 06:15:44 Europe/Berlin] Input file permissions: 0666
+[15-Dec-2024 06:15:44 Europe/Berlin] Output directory permissions: 0777
+[15-Dec-2024 06:15:44 Europe/Berlin] Executing command: python "C:/xampp/htdocs/FYPpage/FOCAL-main/main.py" --type test_single --input_size 1024 --gt_ratio 16 --train_bs 4 --test_bs 8 --save_res 1 --gpu 0,1,2,3 --metric cosine --path_input demo/input/ --path_gt demo/gt/ --nickname demo
+[15-Dec-2024 06:15:44 Europe/Berlin] Command output: 
+[15-Dec-2024 06:15:49 Europe/Berlin] Checking for output file: C:/xampp/htdocs/FYPpage/FOCAL-main/demo/output/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png
+[15-Dec-2024 06:15:49 Europe/Berlin] Output file not found. Listing directory contents:
+[15-Dec-2024 06:15:49 Europe/Berlin] .
+[15-Dec-2024 06:15:49 Europe/Berlin] ..
+[15-Dec-2024 06:15:49 Europe/Berlin] 1.png
+[15-Dec-2024 06:15:49 Europe/Berlin] 2.png
+[15-Dec-2024 06:15:49 Europe/Berlin] 3.png
+[15-Dec-2024 06:15:49 Europe/Berlin] california-1920x1080.png
+[15-Dec-2024 06:15:49 Europe/Berlin] Input file removed
+[15-Dec-2024 06:15:49 Europe/Berlin] Sending response: {"success":false,"error":"Output file not found. Expected something like: C:\/xampp\/htdocs\/FYPpage\/FOCAL-main\/demo\/output\/png-transparent-multicolored-balloons-illustration-balloon-balloon-free-balloons-easter-egg-desktop-wallpaper-party-thumbnail.png"}
